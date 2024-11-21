@@ -1,0 +1,132 @@
+.swiper {
+  max-width: 100%;
+  max-height: 900px;
+  display: flex;
+  justify-content: center;
+}
+.swiper_wrap {
+  width: 100vh;
+  min-height: 900px;
+  margin: 0 auto;
+  background-image: url("../../assets/icons/banner1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper_wrap1 {
+  width: 100vh;
+  min-height: 900px;
+  margin: 0 auto;
+  background-image: url("../../assets/icons/banner2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper_wrap2 {
+  width: 100vh;
+  min-height: 900px;
+  margin: 0 auto;
+  background-image: url("../../assets/icons/banner3.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 900px;
+  height: 116px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 50px;
+}
+
+@media (max-width: 991px) {
+  .container {
+    width: 500px;
+    height: 52px;
+    font-size: 22px;
+    line-height: 24px;
+  }
+  .swiper, .swiper_wrap, .swiper_wrap1, .swiper_wrap2{
+    min-height: 660px;
+  }
+}
+
+@media (max-width: 774px) {
+  .container {
+    width: 300px;
+    height: 52px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .swiper, .swiper_wrap, .swiper_wrap1, .swiper_wrap2{
+    min-height: 515px;
+  }
+}
+@media (max-width: 600px) {
+  .swiper, .swiper_wrap, .swiper_wrap1, .swiper_wrap2{
+    min-height: 399px;
+  }
+}
+@media (max-width: 450px) {
+  .swiper, .swiper_wrap, .swiper_wrap1, .swiper_wrap2{
+    min-height: 300px;
+  }
+}
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+  z-index: -1; /* Ensures the overlay is behind the content */
+  border-radius: 24px;
+}
+/* Custom pagination container */
+.swiper-pagination {
+  position: absolute;
+  top: 0px; /* Paginatsiyani yuqoriga joylashtiradi */
+  left: 50%;
+  transform: translateX(0%); /* Markazlashtiradi */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Paginatsiya konteynerining kengligini to'liq qiladi */
+  margin-bottom: 2%;
+}
+
+/* Custom bullet styles */
+.swiper-pagination-bullet {
+  background-color: transparent;
+  border: 3px solid white;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  opacity: 0.7;
+  transition: opacity 0.3s, transform 0.3s;
+  margin: 0 5px; /* Bullets orasida bo'shliq */
+}
+
+.swiper-pagination-bullet:hover {
+  opacity: 1;
+  transform: scale(1.2); /* Hoverda kattalashadi */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #4ade80; /* Faol bullet rangini o'zgartiradi */
+}
