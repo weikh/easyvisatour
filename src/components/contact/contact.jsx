@@ -7,7 +7,7 @@ import { HiOutlineLocationMarker } from "react-icons/hi";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import axios from "axios";
-import {toast} from 'react-toastify'
+import { toast } from "react-toastify";
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -145,23 +145,31 @@ const Contact = () => {
             <input
               type="text"
               id="name"
+              required
               placeholder={t("name")}
               className="py-[10px] pl-[20px] outline-none text-gray-600"
             />
             <input
               type="text"
               id="surname"
+              required
               placeholder={t("surname")}
               className="py-[10px] pl-[20px] outline-none text-gray-600"
             />
             <input
-              type="text"
+              type="tel"
               id="telephone"
+              required
               placeholder={t("telephone")}
               className="py-[10px] pl-[20px] outline-none text-gray-600"
+              onInput={(e) => {
+                e.target.value = e.target.value.replace(/[^0-9+]/g, ""); // Raqamlar va "+" belgisi qoldiriladi
+              }}
             />
+
             <textarea
               id="comments"
+              required
               cols="10"
               rows="10"
               placeholder={t("comments")}
@@ -173,7 +181,7 @@ const Contact = () => {
             type="submit"
             className="py-[10px] text-white bg-[#ff0000] rounded-[8px] font-bold hover:bg-white hover:text-[#ff0000]"
           >
-            {loading ? t('sending') : t("request")}
+            {loading ? t("sending") : t("request")}
           </button>
         </form>
       </div>
