@@ -8180,7 +8180,7 @@ react-router-dom@^7.0.0:
   dependencies:
     react-router "7.0.0"
 
-react-router@7.0.0, react-router@^7.0.0:
+react-router@7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/react-router/-/react-router-7.0.0.tgz#5da66e1424146a88e9685417e19117b028be54a7"
   integrity sha512-1xf+yMVhUjAzZGY90ZnYJ9KVe1R8FggpugzRBkh+p6vl4cC1sHDe3nO+r5rxWTAgCMf8uN5hfoV2M7rLVTWPUA==
