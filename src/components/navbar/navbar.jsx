@@ -21,7 +21,6 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Navbar - fixed, tepada qotib qolishi uchun */}
       <div className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
         <div className="max-w-[1330px] px-[15px] py-2 h-[80px] mx-auto flex justify-between max-lg:px-2">
           <ul className="flex items-center">
