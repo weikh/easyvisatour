@@ -25,9 +25,9 @@ const Navbar = () => {
       <div className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
         <div className="max-w-[1330px] px-[15px] py-2 h-[80px] mx-auto flex justify-between max-lg:px-2">
           <ul className="flex items-center">
-            <li>
+            <a href="/">
               <img className="w-[100px] h-[58.14px]" src={logo} alt="logo" />
-            </li>
+            </a>
           </ul>
           <ul className="lg:hidden flex gap-2 items-center">
             <li>+99899 712 66 66</li>
