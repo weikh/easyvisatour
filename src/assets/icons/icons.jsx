@@ -28,6 +28,12 @@ import flag9 from './flag9.png'
 import time from './time.webp'
 import support from './support.svg'
 import convenience from './convenience.svg'
+import travels1 from './travels1.jpg'
+import travels2 from './travels2.jpg'
+import travels3 from './travels3.jpg'
+import travels4 from './travels4.jpg'
+import travels5 from './travels5.jpg'
+import travels6 from './travels6.jpg'
 
 export {
   logo,
@@ -59,5 +65,11 @@ export {
   flag9,
   time,
   support,
-  convenience
+  convenience,
+  travels1,
+  travels2,
+  travels3,
+  travels4,
+  travels5,
+  travels6,
 };

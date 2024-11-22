@@ -6,6 +6,12 @@ import Countries from "./components/countries/countries";
 import Excursion from "./components/excursion/excursion";
 import ClientReviews from "./components/clientReviews/clientReviews";
 import Priorities from "./components/priorities/priorities";
+import Services from "./components/services/services";
+import Travels from "./components/travels/travels";
+import Contact from "./components/contact/contact";
+import Footer from "./components/footer/footer";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
@@ -18,6 +24,11 @@ function App() {
       <Excursion />
       <ClientReviews />
       <Priorities />
+      <Services />
+      <Travels />
+      <Contact />
+      <Footer />
+      <ToastContainer />
     </div>
   );
 }

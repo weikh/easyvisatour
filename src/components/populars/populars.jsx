@@ -18,7 +18,7 @@ const Populars = () => {
   const { t } = useTranslation();
   return (
     <>
-      <div className="max-w-[1330px] mx-auto">
+      <div className="max-w-[1330px] mx-auto" id="about">
         <div className="text-[50px] font-bold mt-[50px] flex flex-col">
           {t("populars")}
           <span className="w-12 h-[5px] bg-[#ff0000] border border-[#ff0000] mt-[5px]"></span>
