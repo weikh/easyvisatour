@@ -103,33 +103,33 @@ const Navbar = () => {
             </button>
             <ul className="flex flex-col items-center gap-[30px] text-sm text-[#333] font-bold uppercase">
               <li className="cursor-pointer group inline-block relative">
-                <span className="text-black group-hover:text-red-500 transition-colors duration-[500ms]">
+                <a href="#about" className="text-black group-hover:text-red-500 transition-colors duration-[500ms]">
                   {t("about")}
-                </span>
+                </a>
                 <span className="block h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-[500ms] origin-left"></span>
               </li>
               <li className="cursor-pointer group inline-block relative">
-                <span className="text-black group-hover:text-red-500 transition-colors duration-[500ms]">
+                <a href="#countries" className="text-black group-hover:text-red-500 transition-colors duration-[500ms]">
                   {t("countries")}
-                </span>
+                </a>
                 <span className="block h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-[500ms] origin-left"></span>
               </li>
               <li className="cursor-pointer group inline-block relative">
-                <span className="text-black group-hover:text-red-500 transition-colors duration-[500ms]">
+                <a href="#services" className="text-black group-hover:text-red-500 transition-colors duration-[500ms]">
                   {t("services")}
-                </span>
+                </a>
                 <span className="block h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-[500ms] origin-left"></span>
               </li>
               <li className="cursor-pointer group inline-block relative">
-                <span className="text-black group-hover:text-red-500 transition-colors duration-[500ms]">
+                <a href="#excursion" className="text-black group-hover:text-red-500 transition-colors duration-[500ms]">
                   {t("ourWorks")}
-                </span>
+                </a>
                 <span className="block h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-[500ms] origin-left"></span>
               </li>
               <li className="cursor-pointer group inline-block relative">
-                <span className="text-black group-hover:text-red-500 transition-colors duration-[500ms]">
+                <a href="#contact" className="text-black group-hover:text-red-500 transition-colors duration-[500ms]">
                   {t("contact")}
-                </span>
+                </a>
                 <span className="block h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-[500ms] origin-left"></span>
               </li>
               <li>

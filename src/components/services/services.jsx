@@ -21,72 +21,78 @@ const Services = () => {
       </div>
       <div>
         <div className="flex justify-between mt-[15px] max-w-[1300px] w-full text-[14px] leading-none">
-          <button
-            data-aos="zoom-in"
-            className={`w-[200px] text-white py-3 px-4 rounded-lg focus:outline-none ${
-              activeTab === 0
-                ? "bg-[#ff0000]"
-                : "text-white bg-black hover:opacity-50"
-            }`}
-            onClick={() => setActiveTab(0)}
-          >
-            {t("visa-consultations")}
-          </button>
-          <button
-            data-aos="zoom-in"
-            className={`w-[200px] text-white py-3 px-4 rounded-lg focus:outline-none ${
-              activeTab === 1
-                ? "bg-[#ff0000]"
-                : "text-white bg-black hover:opacity-50"
-            }`}
-            onClick={() => setActiveTab(1)}
-          >
-            {t("tourist-visas")}
-          </button>
-          <button
-            data-aos="zoom-in"
-            className={`w-[200px] text-white py-3 px-4 rounded-lg focus:outline-none ${
-              activeTab === 2
-                ? "bg-[#ff0000]"
-                : "text-white bg-black hover:opacity-50"
-            }`}
-            onClick={() => setActiveTab(2)}
-          >
-            {t("business-visas")}
-          </button>
-          <button
-            data-aos="zoom-in"
-            className={`w-[200px] text-white py-3 px-4 rounded-lg focus:outline-none ${
-              activeTab === 3
-                ? "bg-[#ff0000]"
-                : "text-white bg-black hover:opacity-50"
-            }`}
-            onClick={() => setActiveTab(3)}
-          >
-            {t("document-preparation")}
-          </button>
-          <button
-            data-aos="zoom-in"
-            className={`w-[200px] text-white py-3 px-4 rounded-lg focus:outline-none ${
-              activeTab === 4
-                ? "bg-[#ff0000]"
-                : "text-white bg-black hover:opacity-50"
-            }`}
-            onClick={() => setActiveTab(4)}
-          >
-            {t("tour-packages")}
-          </button>
-          <button
-            data-aos="zoom-in"
-            className={`w-[200px] text-white py-3 px-4 rounded-lg focus:outline-none ${
-              activeTab === 5
-                ? "bg-[#ff0000]"
-                : "text-white bg-black hover:opacity-50"
-            }`}
-            onClick={() => setActiveTab(5)}
-          >
-            {t("insurance")}
-          </button>
+          <div data-aos="zoom-in">
+            <button
+              className={`w-[200px] text-white py-3 px-4 rounded-lg focus:outline-none ${
+                activeTab === 0
+                  ? "bg-[#ff0000]"
+                  : "text-white bg-black hover:opacity-50"
+              }`}
+              onClick={() => setActiveTab(0)}
+            >
+              {t("visa-consultations")}
+            </button>
+          </div>
+          <div data-aos="zoom-in">
+            <button
+              className={`w-[200px] text-white py-3 px-4 rounded-lg focus:outline-none ${
+                activeTab === 1
+                  ? "bg-[#ff0000]"
+                  : "text-white bg-black hover:opacity-50"
+              }`}
+              onClick={() => setActiveTab(1)}
+            >
+              {t("tourist-visas")}
+            </button>
+          </div>
+          <div data-aos="zoom-in">
+            <button
+              className={`w-[200px] text-white py-3 px-4 rounded-lg focus:outline-none ${
+                activeTab === 2
+                  ? "bg-[#ff0000]"
+                  : "text-white bg-black hover:opacity-50"
+              }`}
+              onClick={() => setActiveTab(2)}
+            >
+              {t("business-visas")}
+            </button>
+          </div>
+          <div data-aos="zoom-in">
+            <button
+              className={`w-[200px] text-white py-3 px-4 rounded-lg focus:outline-none ${
+                activeTab === 3
+                  ? "bg-[#ff0000]"
+                  : "text-white bg-black hover:opacity-50"
+              }`}
+              onClick={() => setActiveTab(3)}
+            >
+              {t("document-preparation")}
+            </button>
+          </div>
+          <div data-aos="zoom-in">
+            <button
+              className={`w-[200px] text-white py-3 px-4 rounded-lg focus:outline-none ${
+                activeTab === 4
+                  ? "bg-[#ff0000]"
+                  : "text-white bg-black hover:opacity-50"
+              }`}
+              onClick={() => setActiveTab(4)}
+            >
+              {t("tour-packages")}
+            </button>
+          </div>
+          <div data-aos="zoom-in">
+            <button
+              className={`w-[200px] text-white py-3 px-4 rounded-lg focus:outline-none ${
+                activeTab === 5
+                  ? "bg-[#ff0000]"
+                  : "text-white bg-black hover:opacity-50"
+              }`}
+              onClick={() => setActiveTab(5)}
+            >
+              {t("insurance")}
+            </button>
+          </div>
         </div>
 
         <div className="pl-[50px] mt-[15px] text-[18px]">
