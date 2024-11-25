@@ -7,7 +7,7 @@ const Loader = () => {
       autoPlay
       muted
       loop
-      className="w-full h-full object-cover"
+      className="w-full h-[100vh] object-cover"
     >
       <source src={loader} type="video/mp4" />
     </video>

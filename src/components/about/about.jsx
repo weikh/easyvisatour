@@ -5,23 +5,30 @@ import { useTranslation } from "react-i18next";
 const About = () => {
   const { t } = useTranslation();
   return (
-    <div className="max-w-[1330px] px-[15px] mx-auto flex justify-between">
-      <div className="max-w-[570px]">
-        <p className="text-[50px] font-bold mt-[50px]">{t("about")}</p>
-        <hr className="w-12 h-[5px] bg-[#ff0000] mt-[5px]" />
-        <div className="h-[324px] flex flex-col justify-between mt-[30px]">
-          <p className="font-medium text-lg">{t("about-text1")}</p>
-          <p className="font-medium text-lg">{t("about-text2")}</p>
-          <p className="font-medium text-lg">{t("about-text3")}</p>
+    <div className="max-w-[1330px] px-4 sm:px-6 lg:px-8 mx-auto flex flex-col lg:flex-row justify-between items-center">
+      {/* Matn qismi */}
+      <div className="w-full lg:w-1/2 max-w-[570px] text-center lg:text-left">
+        <p className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-8 lg:mt-0">{t("about")}</p>
+        <hr className="w-12 h-[5px] bg-[#ff0000] mx-auto lg:mx-0 mt-2" />
+        <div className="flex flex-col gap-6 mt-6">
+          <p className="text-base sm:text-lg font-medium">{t("about-text1")}</p>
+          <p className="text-base sm:text-lg font-medium">{t("about-text2")}</p>
+          <p className="text-base sm:text-lg font-medium">{t("about-text3")}</p>
         </div>
-        <hr className="w-[508px] h-[2px] bg-[#ff0000] mt-20" />
+        <hr className="w-full lg:w-[508px] h-[2px] bg-[#ff0000] mt-10" />
       </div>
-      <div className="max-w-[600px] relative max-h-[600px]">
-        <img src={about} className="w-full h-full rounded-[20px]" alt="about" />
+
+      {/* Tasvir qismi */}
+      <div className="w-full lg:w-1/2 max-w-[600px] mt-8 lg:mt-0 relative">
+        <img
+          src={about}
+          className="w-full h-auto rounded-2xl"
+          alt="Image representing about section content"
+        />
         <img
           src={logo}
-          className="absolute -bottom-[50px] -left-1 w-[250px] h-[145px]"
-          alt="logo"
+          className="absolute -bottom-12 left-1/2 lg:left-0 transform -translate-x-1/2 lg:translate-x-0 w-[200px] sm:w-[250px] h-auto"
+          alt="Company brand logo"
         />
       </div>
     </div>

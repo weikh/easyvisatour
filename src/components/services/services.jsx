@@ -14,13 +14,13 @@ const Services = () => {
   }, []);
   const [activeTab, setActiveTab] = useState(0);
   return (
-    <div className="max-w-[1330px] px-[15px] mx-auto mt-[300px]" id="services">
+    <div className="max-w-[1330px] px-[15px] mx-auto mt-[300px] max-lg:mt-[50px]" id="services">
       <div data-aos="fade-right">
         <p className="text-[50px] font-bold">{t("services")}</p>
         <hr className="w-12 h-[5px] bg-[#ff0000] mt-[5px]" />
       </div>
       <div>
-        <div className="flex justify-between mt-[15px] max-w-[1300px] w-full text-[14px] leading-none">
+        <div className="flex flex-wrap gap-4 justify-around mt-[15px] max-w-[1300px] w-full text-[15px] leading-none">
           <div data-aos="zoom-in">
             <button
               className={`w-[200px] text-white py-3 px-4 rounded-lg focus:outline-none ${

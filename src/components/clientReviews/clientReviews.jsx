@@ -17,7 +17,7 @@ const ClientReviews = () => {
   return (
     <div className="max-w-[1330px] px-[15px] mx-auto mt-[50px] flex flex-col">
       <div data-aos="fade-right">
-        <p className="text-[50px] font-bold">{t("clientReviews")}</p>
+        <p className="text-[30px] sm:text-[50px] font-bold">{t("clientReviews")}</p>
         <hr className="w-12 h-[5px] bg-[#ff0000] mt-[5px]" />
       </div>
       <div className="flex flex-wrap justify-around gap-10 mt-4">

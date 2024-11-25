@@ -22,6 +22,7 @@ import {
 const Travels = () => {
   const { t } = useTranslation();
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const images = [travels1, travels2, travels3, travels4, travels5, travels6];
   useEffect(() => {
     AOS.init({
       duration: 500, // Animatsiyaning davomiyligi
@@ -35,10 +36,14 @@ const Travels = () => {
         className="max-w-[1330px] px-[15px] mx-auto mt-[50px] flex flex-col"
         data-aos="fade-right"
       >
-        <p className="text-[50px] text-white font-bold">{t("travels")}</p>
+        <p className="text-[50px] max-sm:text-[30px] text-white font-bold">{t("travels")}</p>
         <hr className="w-12 h-[5px] bg-[#ff0000] mt-[5px] border-none" />
       </div>
-      <div className="max-w-[1330px] px-[15px] mx-auto" data-aos="zoom-in">
+      <div
+        className="max-w-full md:max-w-[1330px] px-4 md:px-[15px] mx-auto"
+        data-aos="zoom-in"
+      >
+        {/* Main Slider */}
         <Swiper
           style={{
             "--swiper-navigation-color": "#fff",
@@ -48,54 +53,55 @@ const Travels = () => {
           navigation={true}
           thumbs={{ swiper: thumbsSwiper }}
           modules={[FreeMode, Navigation, Thumbs]}
-          className="mySwiper2 bg-transparent mt-[40px]"
+          className="bg-transparent mt-[40px]"
         >
-          <SwiperSlide>
-            <img className="w-full h-full" src={travels1} alt="travels1" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img className="w-full h-full" src={travels2} alt="travels2" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img className="w-full h-full" src={travels3} alt="travels3" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img className="w-full h-full" src={travels4} alt="travels4" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img className="w-full h-full" src={travels5} alt="travels5" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img className="w-full h-full" src={travels6} alt="travels" />
-          </SwiperSlide>
+          {images.map((src, index) => (
+            <SwiperSlide key={index}>
+              <img
+                className="w-full h-full object-cover"
+                src={src}
+                alt={`travel ${index + 1}`}
+              />
+            </SwiperSlide>
+          ))}
         </Swiper>
+
+        {/* Thumbnails */}
         <Swiper
           onSwiper={setThumbsSwiper}
           spaceBetween={4}
-          slidesPerView={3}
+          slidesPerView={1}
+          breakpoints={{
+            300: {
+              slidesPerView: 1,
+            },
+            640: {
+              slidesPerView: 3,
+            },
+            1024: {
+              slidesPerView: 4,
+            },
+          }}
           freeMode={true}
           watchSlidesProgress={true}
           modules={[FreeMode, Navigation, Thumbs]}
           className="mySwiper"
-          slideActiveClass="active-slide"
           style={{
-            height: "258px",
+            height: "auto",
           }}
         >
-          {[travels1, travels2, travels3, travels4, travels5, travels6].map(
-            (src, index) => (
-              <SwiperSlide
-                key={index}
-                className="max-w-[258px] max-h-[258px] opacity-1 active-slide:opacity-40 active-slide:border-2 active-slide:border-red-500"
-              >
-                <img
-                  className="w-full h-full object-cover"
-                  src={src}
-                  alt={`travel ${index + 1}`}
-                />
-              </SwiperSlide>
-            )
-          )}
+          {images.map((src, index) => (
+            <SwiperSlide
+              key={index}
+              className="w-[100px] h-[100px] md:w-[200px] md:h-[200px] border-2 border-transparent hover:border-red-500 transition-opacity duration-300"
+            >
+              <img
+                className="w-full max-h-[200px] object-cover"
+                src={src}
+                alt={`travel ${index + 1}`}
+              />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </div>

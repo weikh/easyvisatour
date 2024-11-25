@@ -23,17 +23,16 @@ const Priorities = () => {
   });
   return (
     <>
-      <div className="priorities-bg h-[780px] relative flex-col mt-[70px] pt-[15px]">
-        {/* Header section */}
+      <div className="priorities-bg h-[780px] relative flex-col mt-[70px] pt-[15px] max-lg:h-auto">
+
         <div
-          className="flex flex-col items-center mt-[50px] z-[10]"
+          className="flex flex-col text-center items-center mt-[50px] z-[10]"
           data-aos="fade-right"
         >
-          <p className="text-[50px] font-bold text-white">{t("tourism")}</p>
+          <p className="text-[50px] font-bold text-white max-lg:text-[40px] max-md:text-[30px]">{t("tourism")}</p>
           <hr className="w-12 h-[5px] bg-[#ff0000] border-none" />
         </div>
 
-        {/* Description */}
         <div
           className="max-w-[980px] text-center mx-auto z-[10]"
           data-aos="zoom-in"
@@ -43,21 +42,20 @@ const Priorities = () => {
           </p>
         </div>
 
-        {/* Priorities section */}
-        <div className="h-[177.5px] flex max-w-[1330px] w-full mt-[100px] px-[15px] justify-between mx-auto text-lg font-bold z-[10]">
-          <div className="text-center text-white" data-aos="zoom-in">
+        <div className="flex flex-wrap gap-4 max-w-[1330px] w-full mt-[100px] px-[15px] justify-between mx-auto text-lg font-bold z-[10] max-lg:justify-around max-md:flex-col">
+          <div className="text-center flex flex-col items-center text-white" data-aos="zoom-in">
             <img src={time} className="w-[135px] h-[135px]" alt="time" />
             <p className="mt-[20px]">{t("time")}</p>
           </div>
-          <div className="text-center text-white" data-aos="zoom-in">
+          <div className="text-center flex flex-col items-center text-white" data-aos="zoom-in">
             <RiSecurePaymentLine size={135} color={"white"} />
             <p className="mt-[20px]">{t("reliability")}</p>
           </div>
-          <div className="text-center text-white" data-aos="zoom-in">
+          <div className="text-center flex flex-col items-center text-white" data-aos="zoom-in">
             <img src={support} className="w-[135px] h-[135px]" alt="support" />
             <p className="mt-[20px]">{t("support")}</p>
           </div>
-          <div className="text-center text-white" data-aos="zoom-in">
+          <div className="text-center flex flex-col items-center text-white" data-aos="zoom-in">
             <img
               src={convenience}
               className="w-[135px] h-[135px]"
@@ -66,7 +64,8 @@ const Priorities = () => {
             <p className="mt-[20px]">{t("convenience")}</p>
           </div>
         </div>
-        <div className="absolute visa-bg max-w-[970px] z-[20] -bottom-[20%] left-[50%] translate-x-[-50%] w-full min-h-[150px] rounded-[20px]">
+
+        <div className="absolute  visa-bg max-w-[970px] z-[20] -bottom-[20%] left-[50%] translate-x-[-50%] w-full min-h-[150px] rounded-[20px] max-lg:static max-lg:translate-x-[0] max-lg:mx-auto">
           <div
             className="flex flex-col items-center mt-[50px] z-[10]"
             data-aos="fade-up"
@@ -74,27 +73,39 @@ const Priorities = () => {
             <p className="text-[50px] font-bold text-white">{t("number")}</p>
             <hr className="w-12 h-[5px] bg-[#ff0000] border-none" />
           </div>
-          <div className="flex justify-around items-center h-[194px]">
-            <div ref={ref} className="flex flex-col items-center" data-aos="fade-up">
+          <div className="flex flex-wrap gap-4 justify-around items-center max-lg:flex-col max-lg:min-h-[300px]">
+            <div
+              ref={ref}
+              className="flex flex-col items-center"
+              data-aos="fade-up"
+            >
               <p className="font-bold text-[100px] text-white">
                 {inView && <CountUp start={0} end={7320} duration={3} />}
               </p>
               <p className="text-white uppercase font-bold">{t("visas")}</p>
             </div>
-            <div ref={ref} className="flex flex-col items-center" data-aos="fade-up">
+            <div
+              ref={ref}
+              className="flex flex-col items-center"
+              data-aos="fade-up"
+            >
               <p className="font-bold text-[100px] text-white">
                 {inView && <CountUp start={0} end={7257} duration={3} />}
               </p>
               <p className="text-white uppercase font-bold">{t("trips")}</p>
             </div>
-            <div ref={ref} className="flex flex-col items-center" data-aos="fade-up">
+            <div
+              ref={ref}
+              className="flex flex-col items-center"
+              data-aos="fade-up"
+            >
               <p className="font-bold text-[100px] text-white">
                 {inView && <CountUp start={0} end={7250} duration={3} />}
               </p>
               <p className="text-white uppercase font-bold">{t("clients")}</p>
             </div>
           </div>
-          <hr className="w-full h-[3px] absolute -bottom-[50px] bg-[#ff0000]" />
+          <hr className="w-full h-[3px] absolute -bottom-[50px] bg-[#ff0000] max-lg:hidden" />
         </div>
       </div>
     </>

@@ -23,52 +23,51 @@ const Populars = () => {
           {t("populars")}
           <span className="w-12 h-[5px] bg-[#ff0000] border border-[#ff0000] mt-[5px]"></span>
         </div>
-        <div className="mt-4">
+        <div className="mt-4 max-h-[423px]">
           <Swiper
             navigation={true}
             modules={[Navigation]}
-            spaceBetween={0}
-            slidesPerView={3}
-            className="mySwiper w-full h-full"
+            spaceBetween={10}
+            breakpoints={{
+              // 1024px va undan katta ekranlar uchun
+              1024: {
+                slidesPerView: 3,
+              },
+              // 768px va undan katta ekranlar uchun
+              768: {
+                slidesPerView: 2,
+              },
+              // 640px dan kichik ekranlar uchun
+              640: {
+                slidesPerView: 1,
+              },
+            }}
+            className="w-full flex items-center"
           >
-            <SwiperSlide className="flex justify-center">
-              <div className="w-[250px] h-[220px]">
-                <img src={populars1} className="rounded-lg mx-24 w-full h-full" alt="populars1" />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="w-[250px] h-[220px]">
-                <img src={populars2} className="rounded-lg mx-24 w-full h-full" alt="populars2" />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="w-[250px] h-[220px]">
-                <img src={populars3} className="rounded-lg mx-24 w-full h-full" alt="populars3" />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="w-[250px] h-[220px]">
-                <img src={populars4} className="rounded-lg mx-24 w-full h-full" alt="populars4" />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="w-[250px] h-[220px]">
-                <img src={populars5} className="rounded-lg mx-24 w-full h-full" alt="populars5" />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="w-[250px] h-[220px]">
-                <img src={populars6} className="rounded-lg mx-24 w-full h-full" alt="populars6" />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="w-[250px] h-[220px]">
-                <img src={populars7} className="rounded-lg mx-24 w-full h-full" alt="populars7" />
-              </div>
-            </SwiperSlide>
+            {/* SwiperSlide elementlari */}
+            {[
+              populars1,
+              populars2,
+              populars3,
+              populars4,
+              populars5,
+              populars6,
+              populars7,
+            ].map((image, index) => (
+              <SwiperSlide key={index}>
+                <div className="w-full h-[200px] max-sm:w-[250px] sm:w-[350px] sm:h-[220px] lg:w-[300px] lg:h-[250px] mx-auto">
+                  <img
+                    src={image}
+                    className="rounded-lg w-full h-full object-cover"
+                    alt={`populars${index + 1}`}
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
-        <hr className="w-[502px] h-[2px] bg-[#ff0000] mt-[100px]" />
+
+        <hr className="max-w-[502px] h-[2px] bg-[#ff0000] mt-[100px]" />
       </div>
     </>
   );
