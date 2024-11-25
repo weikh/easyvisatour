@@ -23,7 +23,7 @@ const About = () => {
         <img
           src={about}
           className="w-full h-auto rounded-2xl"
-          alt="Image representing about section content"
+          alt="img"
         />
         <img
           src={logo}
