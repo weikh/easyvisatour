@@ -14,7 +14,7 @@ const Services = () => {
   }, []);
   const [activeTab, setActiveTab] = useState(0);
   return (
-    <div className="max-w-[1330px] px-[15px] mx-auto pt-[250px] max-lg:mt-[50px]" id="services">
+    <div className="max-w-[1330px] px-[15px] mx-auto pt-[250px] max-lg:pt-[50px]" id="services">
       <div data-aos="fade-right">
         <p className="text-[50px] font-bold">{t("services")}</p>
         <hr className="w-12 h-[5px] bg-[#ff0000] mt-[5px]" />
