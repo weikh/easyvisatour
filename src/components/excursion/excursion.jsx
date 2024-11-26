@@ -15,7 +15,7 @@ const Excursion = () => {
     });
   }, []);
   return (
-    <div className="max-w-[1330px] px-[15px] mx-auto mt-[50px] flex flex-col" id="excursion">
+    <div className="max-w-[1330px] px-[15px] mx-auto pt-[80px] flex flex-col" id="excursion">
       <div data-aos="fade-right">
         <p className="text-[50px] font-bold">{t("excursion")}</p>
         <hr className="w-12 h-[5px] bg-[#ff0000] mt-[5px]" />

@@ -54,7 +54,7 @@ const Contact = () => {
   }, []);
 
   return (
-    <div className="bg-black text-white min-h-[200px] pb-[100px]" id="contact">
+    <div className="bg-black text-white min-h-[200px] pt-[60px] pb-[100px]" id="contact">
       <div className="max-w-[1330px] mx-auto flex flex-wrap gap-1 justify-between pt-[50px] max-sm:justify-center max-lg:justify-center overflow-hidden">
         {/* Chap blok */}
         <div className="max-w-[300px] w-full flex flex-col pb-5 sm:max-w-[300px] max-lg:text-center">
